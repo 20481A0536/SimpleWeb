@@ -64,3 +64,54 @@ The project consists of the following main packages:
    ```bash
    git clone https://github.com/20481A0536/SimpleWeb.git
    cd SimpleWeb
+
+2.Build the application: If using Maven:
+mvn clean install
+
+
+3.Configure the application properties: Update application.properties (or application.yml) for your database connection details.
+
+4.Run the application:
+mvn spring-boot:run  or run the simplewebApplication.java 
+
+5.Access the application: The application will be available at http://localhost:8080.
+
+Example Usage
+Adding a Product
+bash
+curl -X POST http://localhost:8080/products/additem -H "Content-Type: application/json" -d '{"prodId":1,"prodName":"Product A","price":100}'
+
+Retrieving All Products
+```bash
+curl http://localhost:8080/products
+
+Updating a Product
+```bash
+curl -X PUT http://localhost:8080/products -H "Content-Type: application/json" -d '{"prodId":1,"prodName":"Updated Product A","price":150}'
+
+Deleting a Product
+```bash
+curl -X DELETE http://localhost:8080/products/1
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Acknowledgments
+Spring Boot Documentation
+Spring Data JPA
+Jakarta Persistence
+
+
+### Notes:
+- **Endpoints**: Make sure the endpoints and request bodies match your actual implementation.
+- **License**: You can modify the license section according to your project's licensing.
+- **Database Configuration**: Ensure to provide instructions for configuring the database if needed.
+- **Further Enhancements**: You might want to add sections for testing, deployment, or additional features if applicable.
+
+Feel free to customize this template to suit your project's specifics!
+
+
+
+
+
+

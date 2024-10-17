@@ -81,6 +81,7 @@ Adding a Product
 bash
 curl -X POST http://localhost:8080/products/additem -H "Content-Type: application/json" -d '{"prodId":1,"prodName":"Product A","price":100}'
 
+
 Retrieving All Products
 ```bash
 curl http://localhost:8080/products
